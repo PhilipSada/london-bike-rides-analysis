@@ -1,6 +1,6 @@
 # London Bike Rides Analysis
 ## Project Overview
-This is a SQL and Tableau project on the sales analysis of a global superstore. This project aims to provide insights to answer important questions and help the superstore make data driven decisions.
+This is a Python and Tableau project analyzing london bike analysis. This project aims to provide insights that could help individuals or companies predict future bike shares.
 The dataset used in this project can be found in Kaggle.
 
 You can interact with the dashboard in tableau public [here](https://public.tableau.com/views/LondonBikeRidesDashboard-1/Dashboard1?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link)
