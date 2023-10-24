@@ -29,6 +29,86 @@ with zipfile.ZipFile(zipfile_name, 'r') as file:
 # reading in the csv file as a pandas dataframe
 bikes = pd.read_csv("london_merged.csv")
 ```
+```python
+# exploring the data
+bikes.info()
+```
+```python
+# counting the unique values in the weather_code column
+bikes.weather_code.value_counts()
+```
+```python
+# counting the unique values in the weather_code column
+bikes.weather_code.value_counts()
+```
+```python
+# count the unique values in the season column
+bikes.season.value_counts()
+```
+```python
+# identifying the column names needed for the analysis
+new_cols_dict = {
+    'timestamp':'time',
+    'cnt':'count', 
+    't1':'temp_real_C',
+    't2':'temp_feels_like_C',
+    'hum':'humidity_percent',
+    'wind_speed':'wind_speed_kph',
+    'weather_code':'weather',
+    'is_holiday':'is_holiday',
+    'is_weekend':'is_weekend',
+    'season':'season'
+}
+
+# renaming the columns to the column names listed in the dictionary above
+bikes.rename(new_cols_dict, axis=1, inplace=True)
+```
+
+```python
+# making the humdity values more understandable by changing it to percentage (i.e. a value between 0 and 1)
+bikes.humidity_percent = bikes.humidity_percent / 100
+```
+
+```python
+# creating a weather dictionary so that we can map the integers to the actual written values making it more readable
+weather_dict = {
+    '1.0':'Clear',
+    '2.0':'Scattered clouds',
+    '3.0':'Broken clouds',
+    '4.0':'Cloudy',
+    '7.0':'Rain',
+    '10.0':'Rain with thunderstorm',
+    '26.0':'Snowfall'
+}
+
+# changing the weather column data type to string
+bikes.weather = bikes.weather.astype('str')
+# mapping the values to the actual written weathers
+bikes.weather = bikes.weather.map(weather_dict)
+
+# creating a season dictionary so that the integers 0-3 can be mapped to the actual written values, making it more readable
+season_dict = {
+    '0.0':'spring',
+    '1.0':'summer',
+    '2.0':'autumn',
+    '3.0':'winter'
+}
+
+# changing the seasons column data type to string
+bikes.season = bikes.season.astype('str')
+# mapping the values 0-3 to the actual written seasons
+bikes.season = bikes.season.map(season_dict)
+```
+
+```python
+# checking the dataframe to see the modified data
+bikes.head()
+```
+
+```python
+# writing the final dataframe to an excel file which would be used for the tableau visualization
+bikes.to_excel('london_bikes_final.xlsx', sheet_name='Data')
+```
 
 ## Data Analysis and Visualization
 Tableau was used for the data analysis and visualization. 
