@@ -11,7 +11,14 @@ You can interact with the dashboard in tableau public [here](https://public.tabl
 
 ## Data Gathering, Exploration and Manipulation
 ## Data Analysis and Visualization
-Tableau was used for the data analysis and visualization. The following are some of the key findings:
+Tableau was used for the data analysis and visualization. 
+![Dashboard](https://github.com/PhilipSada/london-bike-rides-analysis/assets/55988995/b21412b7-867e-44a0-a9a1-e32123731517)
+![Dashboard](https://github.com/PhilipSada/london-bike-rides-analysis/assets/55988995/df8e1e6a-e2a3-418e-8d8e-7ff10a3b334b)
+![Dashboard](https://github.com/PhilipSada/london-bike-rides-analysis/assets/55988995/ee23f28b-2f0f-415c-a8dd-777d6b13b6eb)
+![Dashboard](https://github.com/PhilipSada/london-bike-rides-analysis/assets/55988995/91c1c777-8b2b-4f4a-b73e-6f7cc763c890)
+![Dashboard](https://github.com/PhilipSada/london-bike-rides-analysis/assets/55988995/55c2f3b3-0f63-4bc8-a957-ef34ddd7895a)
+
+The following are some of the key findings:
 ### a. Peak Activity Months:
 The analysis highlighted August of both 2015 and 2016 as the periods with the highest bike ride activities, as indicated by the moving average figures. This suggests a seasonal trend where biking activities surge during the summer months, possibly due to more favorable weather conditions.
 
