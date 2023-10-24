@@ -10,6 +10,26 @@ You can interact with the dashboard in tableau public [here](https://public.tabl
 
 
 ## Data Gathering, Exploration and Manipulation
+```python
+import pandas as pd
+import kaggle
+import zipfile
+```
+```python
+#downloading dataset from kaggle using the Kaggle API
+!kaggle datasets download -d hmavrodiev/london-bike-sharing-dataset
+```
+```python
+# extracting the file from the downloaded zip file
+zipfile_name = 'london-bike-sharing-dataset.zip'
+with zipfile.ZipFile(zipfile_name, 'r') as file:
+    file.extractall()
+```
+```python
+# reading in the csv file as a pandas dataframe
+bikes = pd.read_csv("london_merged.csv")
+```
+
 ## Data Analysis and Visualization
 Tableau was used for the data analysis and visualization. 
 
